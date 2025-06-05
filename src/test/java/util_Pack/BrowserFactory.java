@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -17,7 +18,9 @@ public class BrowserFactory
 		if(browserName.equalsIgnoreCase("Chrome"))
 		{
 		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
-		driver=new ChromeDriver();
+		ChromeOptions options=new ChromeOptions();
+		options.setHeadless(false);
+		driver=new ChromeDriver(options);
 		}
 		else if(browserName.equalsIgnoreCase("Edge"))
 		{
