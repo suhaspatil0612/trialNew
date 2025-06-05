@@ -14,7 +14,7 @@ public class test extends BaseClass
 	@BeforeClass
 	public void setup() throws InterruptedException {
 		setUp1();
-		
+		System.out.println("Test passed");
 	}
 
 	@Test
